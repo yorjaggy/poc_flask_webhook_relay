@@ -12,4 +12,3 @@ FROM base
 COPY --from=builder /install /usr/local
 COPY src /app
 WORKDIR /app
-CMD ["gunicorn", "--bind 0.0.0.0:80 --workers 2", "main:app"]
