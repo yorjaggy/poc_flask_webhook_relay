@@ -2,7 +2,7 @@ version: '3'
 # 
 services:
   flask_api:
-    image: flask_hw_test:3
+    image: flask_gunicorn:latest
     ports:
       - 8585:8585
     volumes:
@@ -19,11 +19,11 @@ services:
       - --mode 
       - tunnel 
       - -t
-      - <name_tunnel>
+      - YOUR_TUNNEL_NAME
     restart: always
     environment: 
-      - KEY=<WEBHOOK_KEY_VAL>
-      - SECRET=<WEBHOOK_SECRET_VAL>
+      - KEY=WEBHOOK_KEY_VAL
+      - SECRET=WEBHOOK_SECRET_VAL
 
 
  
