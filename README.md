@@ -16,12 +16,12 @@ git clone https://github.com/yorjaggy/poc_flask_webhook_relay.git
 2. Create a tunnel in Webhook Relay (WR) website
 In WR dashboard, go to tunnels and create a Tunnel, you should provide a tunnel name and destination host. Other parameters are set up by default
 ```
-Name = poc_wr_flask
+Name = myflasktunnel
 Destination=http://flask_api:80
 ```
 
 3. Create an access token to WR client
-In WR dashboar, go to Access Tokens and create a new Token. Save the key and secret value created to use on docker-compose.yml file
+In WR dashboard, go to Access Tokens and create a new Token. Save the key and secret value created to use on docker-compose.yml file
 
 4. Build a minimal docker image with Python and Gunicorn
 Execute the next command to build the docker image to use in your docker-compose.yml file
