@@ -4,10 +4,10 @@ services:
   flask_api:
     image: flask_gunicorn:latest
     ports:
-      - 8585:8585
+      - 80:80
     volumes:
       - ./src:/app
-    command: gunicorn --bind 0.0.0.0:80 --workers 2 main:app
+    command: gunicorn --bind 0.0.0.0:80 -w 2 main:app
     #command: python main.py
 
 #When you use compose or swarm to deploy multiple services, use service name in tunnel creation to
@@ -19,11 +19,10 @@ services:
       - --mode 
       - tunnel 
       - -t
-      - YOUR_TUNNEL_NAME
+      - myflasktunnel
     restart: always
     environment: 
       - KEY=WEBHOOK_KEY_VAL
       - SECRET=WEBHOOK_SECRET_VAL
 
 
- 
