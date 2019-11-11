@@ -21,7 +21,7 @@ Destination=http://flask_api:80
 ```
 
 3. Create an access token to WR client
-In WR dashboar, go to Access Tokens and create a new Token. Save the key and secret value created to use on docker-compose.yml file
+In WR dashboard, go to Access Tokens and create a new Token. Save the key and secret value created to use on docker-compose.yml file
 
 4. Build a minimal docker image with Python and Gunicorn
 Execute the next command to build the docker image to use in your docker-compose.yml file
