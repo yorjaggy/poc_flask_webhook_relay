@@ -16,7 +16,7 @@ git clone https://github.com/yorjaggy/poc_flask_webhook_relay.git
 2. Create a tunnel in Webhook Relay (WR) website
 In WR dashboard, go to tunnels and create a Tunnel, you should provide a tunnel name and destination host. Other parameters are set up by default
 ```
-Name = poc_wr_flask
+Name = myflasktunnel
 Destination=http://flask_api:80
 ```
 
